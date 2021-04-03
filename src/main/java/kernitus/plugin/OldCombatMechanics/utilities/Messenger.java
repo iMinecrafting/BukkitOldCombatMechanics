@@ -59,15 +59,15 @@ public class Messenger {
      * @param args    The args to format the message with.
      */
     public static void sendWithPrefix(CommandSender sender, String message, String prefix, Object... args) {
-        send(sender, prefix + " " + message, args);
+        send(sender, prefix + message, args);
     }
 
     public static void sendNormalMessage(CommandSender sender, String message, Object... args){
-        sendWithPrefix(sender, message, "&6[OCM]&r", args);
+        sendWithPrefix(sender, message, "", args);
     }
 
     public static void sendDebugMessage(CommandSender sender, String message, Object... args){
-        sendWithPrefix(sender, message, "&1[Debug]&r", args);
+        sendWithPrefix(sender, message, "&1[Debug]&r ", args);
     }
 
     public static void debug(String message, Throwable throwable) {
